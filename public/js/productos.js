@@ -41,10 +41,10 @@ function Read() {
             let filas = "";
             response.data.forEach((element, index) => {
                 filas += `<tr>`;
-                filas += `<td scope='row'>${index + 1}</td>`;
+                filas += `<td scope='row' style="text-align: center;">${index + 1}</td>`;
                 filas += `<td>${element.nombre}</td>`;
-                filas += `<td>${element.cantidad}</td>`;
-                filas += `<td><input onclick='load(${JSON.stringify(element)})' type="radio" name="checkOpcion" id="checkOpcion"></td>`;
+                filas += `<td style="text-align: center;">${element.cantidad}</td>`;
+                filas += `<td style="text-align: center;"><input onclick='load(${JSON.stringify(element)})' type="radio" name="checkOpcion" id="checkOpcion"></td>`;
                 filas += `</tr>`;
             });
             document.getElementById("tbl-Producto").innerHTML = filas
