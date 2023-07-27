@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../js/axios.min.js"></script>
+    <script src="../js/productos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Tienda Laravel</title>
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center;">
+    <h1>Productos:</h1>
+</div>
+<br>
+<br>
+<div  style="display: grid; place-items: center;">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="txtNombre">
+        <label for="txtNombre">Nombre</label>
+      </div>
+      <div class="form-floating">
+        <input type="number" class="form-control" name="txtCantidad" id="txtCantidad">
+        <label for="floatingPassword">Cantidad</label>
+      </div>
+  
+    <br>
+    <div>
+        <button onclick="Create()" class="btn btn-success">Crear</button>
+        <button onclick="Update()" class="btn btn-info">Modificar</button>
+        <button onclick="Delete()" class="btn btn-danger">Eliminar</button>
+    </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <h2 class="text-center text-dark">Datos Productos</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Opciones</th>
+                </tr>
+            </thead>
+            <tbody id="tbl-Producto">
+
+            </tbody>
+        </table>
+
+    </div>
+    
+</div>
+</body>
+
+</html>
